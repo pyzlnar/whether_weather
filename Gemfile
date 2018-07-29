@@ -8,8 +8,11 @@ gem 'rails', '~> 5.2.0'
 # DB
 gem 'sqlite3'
 
-# Assets
+# App
+gem 'bootstrap'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'slim-rails'
 gem 'uglifier',   '>= 1.3.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false

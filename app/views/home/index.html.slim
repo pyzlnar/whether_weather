@@ -1,0 +1,6 @@
+.row
+  h1 Weather
+
+= form_tag '/search', method: :get
+  = text_field_tag :q, nil, type: :search, placeholder: 'City'
+  = submit_tag 'Search', class: 'btn btn-primary'

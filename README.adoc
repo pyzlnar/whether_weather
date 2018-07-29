@@ -1,0 +1,52 @@
+// Asciidoctor Source
+// WhetherWeather README
+//
+// Original author:
+// - pyzlnar
+//
+// Notes:
+// Compile with: $ asciidoctor README.adoc
+
+= WhetherWeather
+[Small practice project]
+:toc:
+:showtitle:
+:source-highlighter: coderay
+
+== Introduction
+
+WhetherWeather is a small practice project with the purpose of practicing Ruby and Rails concepts
+with a trainee.
+
+There's probably not much of interest for an outsider to look, but hey feel free to look around.
+
+== Requirements
+
+- Ruby 2.5.1
+- Bundler
+
+== Installation
+
+Download the repository and install the dependencies with bundler
+
+[source,bash]
+----
+$ git clone https://github.com/pyzlnar/whether_weather.git
+$ cd whether_weather
+$ bundle install
+----
+
+=== Running
+
+As any other rails project, you can run with the following:
+
+[source,bash]
+----
+$ rails server
+----
+
+== License
+
+WhetherWeather is released under the https://opensource.org/licenses/MIT[MIT License].
+
+Come on, it's just a practice project.

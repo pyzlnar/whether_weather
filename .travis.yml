@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.5.1
+
+matrix:
+  fast_finish: true
+
+script: bundle exec rspec && bundle exec rubocop
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never

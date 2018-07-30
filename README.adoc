@@ -36,13 +36,66 @@ $ cd whether_weather
 $ bundle install
 ----
 
-=== Running
+After installing, you'll need to setup the credentials. So either:
+
+A) Use the necessary `master.key`
+
+[source,bash]
+----
+$ cp ~/somewhere/master.key config/
+----
+
+B) Delete the existing credentials and create new ones
+
+[source,bash]
+----
+$ rm config/credentials.yml.enc
+$ cp ~/somewhere/master.key config/
+$ EDITOR=vim rails credentials:edit
+----
+
+And it will end up looking like this
+
+[source,yaml]
+----
+# Shhh secrets go here!
+secret_key_base:  YOUR_SECRET_KEY_BASE
+open_weather_key: YOUR_OPEN_WEATHER_KEY
+----
+
+== Running
 
 As any other rails project, you can run with the following:
 
 [source,bash]
 ----
 $ rails server
+----
+
+That said, you might want to avoid hitting the API everytime, specially considering OpenWeather's
+quotas are kinda low. +
+If that's the case you can run the server with environment variable `ENABLE_VCR_CABLE=true` which
+will save a response and use the saved one for any further requests.
+
+[source,bash]
+----
+$ ENABLE_VCR_CABLE=true rails server
+----
+
+== Tests
+
+To run the unit tests, just do:
+
+[source,bash]
+----
+$ rspec
+----
+
+Additionally if you want to run the lint, you can do:
+
+[source,bash]
+----
+$ rubocop
 ----
 
 == License

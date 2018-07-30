@@ -10,6 +10,7 @@ gem 'sqlite3'
 
 # Assets
 gem 'bootstrap'
+gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
@@ -21,6 +22,8 @@ gem 'httparty'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'vcr_cable'
+  gem 'webmock'
 end
 
 group :development do
@@ -31,8 +34,7 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop'
-  gem 'vcr'
-  gem 'webmock'
 end

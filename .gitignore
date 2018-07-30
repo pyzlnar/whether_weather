@@ -31,3 +31,6 @@
 
 # Ignore processed README
 README.html
+
+# Ignore vcr cassettes
+/vcr_cassettes

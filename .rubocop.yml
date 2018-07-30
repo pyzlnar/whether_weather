@@ -2,7 +2,11 @@ AllCops:
   TargetRubyVersion: 2.5.1
   Include:
     - '**/Gemfile'
+    - 'app/**/*'
+    - 'lib/**/*'
   Exclude:
+    - 'app/assets/**/*'
+    - 'app/views/**/*'
     - 'bin/**/*'
     - 'db/**/*'
     - 'config/**/*'
@@ -17,6 +21,9 @@ Metrics/LineLength:
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+
+Style/ModuleFunction:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false

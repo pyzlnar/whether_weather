@@ -1,0 +1,38 @@
+.row
+  h1 Weather
+
+.row
+  .mb-1
+    = form_tag weather_path, method: :get
+      = text_field_tag :city, nil, type: :search, placeholder: 'City'
+      = submit_tag 'Search', class: 'btn btn-primary'
+
+- if @weather
+  .row
+    .card
+      .card-body
+        i.fa.fa-sun-o
+        .pull-right
+          i.fa.fa-bolt
+
+        h3.card-title= @weather.city
+        h6.card-subtitle.text-muted Today's Weather
+        .card-text
+          dl
+            dt Weather
+            dl= @weather.weather
+
+            dt Temperature
+            dl
+              = @weather.temp
+              |  C
+
+            dt Temperature Min
+            dl
+              = @weather.temp_min
+              |  C
+
+            dt Temperature Max
+            dl
+              = @weather.temp_max
+              |  C

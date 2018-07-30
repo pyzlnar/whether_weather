@@ -9,4 +9,25 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .container
+      .mb-1
+      - if flash[:success]
+        .row
+          .col-md-12
+            .alert.alert-success= flash[:success]
+
+      - if flash[:info]
+        .row
+          .col-md-12
+            .alert.alert-info= flash[:info]
+
+      - if flash[:warning]
+        .row
+          .col-md-12
+            .alert.alert-warning= flash[:warning]
+
+      - if flash[:failure]
+        .row
+          .col-md-12
+            .alert.alert-danger= flash[:failure]
+
       = yield

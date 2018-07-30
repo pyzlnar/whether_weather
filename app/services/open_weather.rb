@@ -1,3 +1,5 @@
+# Manages the open weather API
+# https://openweathermap.org/api
 module OpenWeather
   extend self
 

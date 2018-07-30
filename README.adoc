@@ -13,6 +13,8 @@
 :showtitle:
 :source-highlighter: coderay
 
+image:https://travis-ci.org/pyzlnar/whether_weather.svg?branch=master["Build Status", link="https://travis-ci.org/pyzlnar/whether_weather"]
+
 == Introduction
 
 WhetherWeather is a small practice project with the purpose of practicing Ruby and Rails concepts

@@ -11,9 +11,10 @@ describe ForecastController do
     end
 
     it 'returns a weather if city param is received' do
-      result   = double(success?: true)
+      result   = double(success?: true, merge: double)
       forecast = double
       expect(OpenWeather).to receive(:weather).and_return(result)
+      expect(OpenWeather).to receive(:forecast).and_return(result)
       expect(Forecast).to receive(:new).and_return(forecast)
 
       get :show, params: { city: :london }
@@ -23,6 +24,7 @@ describe ForecastController do
     it 'renders with a flash if open weather fails to load' do
       result = double(success?: false)
       expect(OpenWeather).to receive(:weather).and_return(result)
+      expect(OpenWeather).to receive(:forecast).and_return(result)
       expect(Forecast).to_not receive(:new)
 
       get :show, params: { city: :london }

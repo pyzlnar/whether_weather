@@ -15,6 +15,10 @@ module OpenWeather
     CONFIG
   end
 
+  def forecast(city:)
+    send_request(:forecast, q: city)
+  end
+
   def weather(city:)
     send_request(:weather, q: city)
   end

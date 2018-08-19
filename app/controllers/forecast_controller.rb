@@ -1,6 +1,6 @@
-# This controller manages weather requests
-class WeatherController < ApplicationController
-  # GET /weather
+# This controller manages forecast requests
+class ForecastController < ApplicationController
+  # GET /forecast
   def show
     return unless params[:city].present?
 
@@ -10,6 +10,6 @@ class WeatherController < ApplicationController
       return
     end
 
-    @weather = Weather.new(response: result)
+    @forecast = Forecast.new(response: result)
   end
 end

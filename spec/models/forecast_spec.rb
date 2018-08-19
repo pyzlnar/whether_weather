@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe Weather do
-  let(:model) { Weather }
+describe Forecast do
+  let(:model) { Forecast }
 
   context '#initialize' do
     it 'is able to initialize from a response' do

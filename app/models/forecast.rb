@@ -1,6 +1,6 @@
 # Virtual Model
 # Encapsules the response of the current weather
-class Weather
+class Forecast
   ATTRIBUTES = %i[
     city
     temp

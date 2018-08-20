@@ -1,0 +1,18 @@
+// Asciidoctor Source
+// Whether Weather CHANGELOG
+//
+// Original author:
+// - pyzlnar
+//
+// Notes:
+// Compile with: $ asciidoctor CHANGELOG.adoc
+
+== 2018-08-19
+
+- :dizzy: link:https://github.com/pyzlnar/whether_weather/commit/bff075a31139a22194d3e5a2f0266d80f42e2bd8[bff075a] Renamed Weather as Forecast
+- :sparkles: link:https://github.com/pyzlnar/whether_weather/commit/3ddff8728767410cd334b47f6b6a57fcfddb874c[3ddff87] Added tomorrow's and 5 days forecast
+- :sparkles: link:https://github.com/pyzlnar/whether_weather/commit/f3867049bca7b9876e3208f31bb7eca207633d51[f386704] Added cities
+- :sparkles: link:https://github.com/pyzlnar/whether_weather/commit/6b67f0f33ace74baa452702b20d7420550f8ed11[6b67f0f] Added a simple typeahead
+
+== 2018-07-30
+- :confetti_ball: Initial Release!

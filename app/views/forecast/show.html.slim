@@ -4,8 +4,19 @@
 .row
   .mb-1
     = form_tag forecast_path, method: :get
-      = text_field_tag :city, nil, type: :search, placeholder: 'City', value: @forecast&.city
+      = text_field_tag :city, nil,
+        autocomplete: :off,
+        id:           :typeahead,
+        placeholder:  'City',
+        type:         :search,
+        value:        @forecast&.city
+
+      = hidden_field_tag :id, nil, id: 'typeahead-id'
+
       = submit_tag 'Search', class: 'btn btn-primary'
+
+      / This is horrible and the reason im not a front end dev
+      ul#typeahead-results.list-group
 
 - if @forecast
   .row

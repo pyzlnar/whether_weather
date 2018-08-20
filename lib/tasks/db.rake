@@ -3,7 +3,7 @@ namespace :db do
   # http://bulk.openweathermap.org/sample/city.list.json.gz
   desc 'Imports cities from db/data/cities.list.json file'
   task import_cities: :environment do
-    path = Rails.root.join(*%w[db data city.list.json])
+    path = Rails.root.join('db', 'data', 'city.list.json')
     file = File.read(path)
     json = JSON.parse(file)
 
@@ -28,7 +28,6 @@ namespace :db do
       print "Progress (~#{percent}%) #{processed}/#{total} cities\r"
     end
 
-    puts
-    puts 'Done!'
+    puts "\nDone!"
   end
 end

@@ -1,3 +1,4 @@
+# Has cities mapped
 class City < ApplicationRecord
   validates :name,
             presence: true

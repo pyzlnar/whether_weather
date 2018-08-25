@@ -16,11 +16,11 @@ module OpenWeather
   end
 
   def forecast(city:)
-    send_request(:forecast, q: city)
+    send_request(:forecast, id: city)
   end
 
   def weather(city:)
-    send_request(:weather, q: city)
+    send_request(:weather, id: city)
   end
 
   private

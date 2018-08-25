@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openweathermap.org/data/2.5/weather?appid=<APP_ID>&q=Mexico%20City&units=metric
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<APP_ID>&id=3530597&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,15 +21,15 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 29 Jul 2018 23:47:45 GMT
+      - Sat, 25 Aug 2018 20:42:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '443'
+      - '449'
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/2.5/weather?q=mexico+city&units=metric"
+      - "/data/2.5/weather?id=3530597&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -38,9 +38,9 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":-99.13,"lat":19.43},"weather":[{"id":803,"main":"Clouds","description":"broken
-        clouds","icon":"04d"}],"base":"stations","main":{"temp":23,"pressure":1025,"humidity":38,"temp_min":23,"temp_max":23},"visibility":12874,"wind":{"speed":7.2,"deg":300},"clouds":{"all":75},"dt":1532906220,"sys":{"type":1,"id":3998,"message":0.0031,"country":"MX","sunrise":1532866331,"sunset":1532913211},"id":3530597,"name":"Mexico
+      string: '{"coord":{"lon":-99.13,"lat":19.43},"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"base":"stations","main":{"temp":23.69,"pressure":1026,"humidity":36,"temp_min":21,"temp_max":26},"visibility":11265,"wind":{"speed":2.1,"deg":140},"clouds":{"all":40},"dt":1535226720,"sys":{"type":1,"id":3998,"message":0.0228,"country":"MX","sunrise":1535199598,"sunset":1535244982},"id":3530597,"name":"Mexico
         City","cod":200}'
-    http_version:
-  recorded_at: Sun, 29 Jul 2018 23:47:48 GMT
+    http_version: 
+  recorded_at: Sat, 25 Aug 2018 20:42:10 GMT
 recorded_with: VCR 4.0.0

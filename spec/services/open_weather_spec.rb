@@ -6,7 +6,7 @@ describe OpenWeather do
   context '.weather' do
     it 'returns info about the weather' do
       response = VCR.use_cassette 'open_weather_weather' do
-        service.weather(city: 'Mexico City')
+        service.weather(city: 3530597)
       end
 
       expect(response['name']).to eq 'Mexico City'

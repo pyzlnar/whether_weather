@@ -17,7 +17,7 @@ describe ForecastController do
       expect(OpenWeather).to receive(:forecast).and_return(result)
       expect(Forecast).to receive(:new).and_return(forecast)
 
-      get :show, params: { city: :london }
+      get :show, params: { id: 2643743, city: :london }
       expect(assigns(:forecast)).to eq forecast
     end
 
@@ -27,7 +27,7 @@ describe ForecastController do
       expect(OpenWeather).to receive(:forecast).and_return(result)
       expect(Forecast).to_not receive(:new)
 
-      get :show, params: { city: :london }
+      get :show, params: { id: 2643743, city: :london }
       expect(flash[:failure]).to_not be_empty
     end
   end

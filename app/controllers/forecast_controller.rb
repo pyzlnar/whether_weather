@@ -2,9 +2,9 @@
 class ForecastController < ApplicationController
   # GET /forecast
   def show
-    return unless params[:city].present?
+    return unless params[:id].to_s.match?(/\A\d+\z/)
 
-    unless (result = request_forecast(params[:city].strip))
+    unless (result = request_forecast(params[:id]))
       flash.now[:failure] = 'Something went wrong, please try again later'
       return
     end

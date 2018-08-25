@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Utilities
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'fast_jsonapi'
 gem 'httparty'
 
 group :development, :test do
@@ -34,6 +35,7 @@ group :development do
 end
 
 group :test do
+  gem 'factory_bot_rails', require: false
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop'

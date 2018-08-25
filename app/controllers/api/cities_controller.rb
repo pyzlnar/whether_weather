@@ -7,6 +7,7 @@ class Api::CitiesController < ApplicationController
     end
 
     @cities = City.where('name LIKE ?', "#{params[:name].strip}%")
-    render status: 200, json: @cities
+    json    = CitySerializer.new(@cities).serialized_json
+    render status: 200, json: json
   end
 end

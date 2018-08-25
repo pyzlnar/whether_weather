@@ -10,5 +10,14 @@ describe Api::CitiesController do
       expect(response.status).to eq 422
       expect(response.body).to eq expected
     end
+
+    it 'returns a json with the available cities' do
+      get :index, params: { name: :mex }
+
+      expected = CitySerializer.new([build(:mexico)]).serialized_json
+
+      expect(response.status).to eq 200
+      expect(response.body).to eq expected
+    end
   end
 end

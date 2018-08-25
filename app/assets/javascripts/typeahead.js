@@ -15,11 +15,14 @@ $().ready(() => {
   }
 
   const displayList = response => {
-    const cities = response.map(city => (
-      `<li class="list-group-item list-group-item-action typeahead-result" data-id="${city.id}" data-name="${city.name}">${city.name}</li>`
-    ))
+    const cities = response.data.map(getCityHtml)
     $typeaheadResults.html(cities)
     $('.typeahead-result').click(selectResult)
+  }
+
+  const getCityHtml = city => {
+    const { id, attributes: { name } } = city
+    return `<li class="list-group-item list-group-item-action typeahead-result" data-id="${id}" data-name="${name}">${name}</li>`
   }
 
   const selectResult = e => {

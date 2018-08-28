@@ -12,6 +12,10 @@ describe Api::CitiesController do
     end
 
     it 'returns a json with the available cities' do
+      create(:chihuahua)
+      create(:hermosillo)
+      create(:mexico)
+
       get :index, params: { name: :mex }
 
       expected = CitySerializer.new([build(:mexico)]).serialized_json

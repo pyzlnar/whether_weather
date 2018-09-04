@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Utilities
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'dalli'
 gem 'fast_jsonapi'
 gem 'httparty'
 

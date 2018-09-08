@@ -26,6 +26,7 @@ There's probably not much of interest for an outsider to look, but hey feel free
 
 - Ruby 2.5.1
 - Bundler
+- Memcached
 
 == Installation
 

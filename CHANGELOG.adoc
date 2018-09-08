@@ -7,6 +7,16 @@
 // Notes:
 // Compile with: $ asciidoctor CHANGELOG.adoc
 
+== 2018-09-08
+- :sparkles: link:https://github.com/pyzlnar/whether_weather/commit/820a8fca5186eaf57cd7f4d2aad6ccbeabf77f87[820a8fc] Refactored business logic into a command
+
+== 2018-09-03
+- :sparkles: link:https://github.com/pyzlnar/whether_weather/commit/254e750bc3ee991a5b7329b6053541a188c3c78a[254e750] Added memcache to the project
+
+== 2018-08-27
+- :dizzy: link:https://github.com/pyzlnar/whether_weather/commit/f398c0d25e53a74a937a7b59a4d1442144958cf9[f398c0d] Switched to fast_jsonapi
+- :dizzy: link:https://github.com/pyzlnar/whether_weather/commit/916a8b77e2c1c9eb6fc20e5050f4733d01b6298e[916a8b7] Changed use of city name to id
+
 == 2018-08-19
 
 - :dizzy: link:https://github.com/pyzlnar/whether_weather/commit/bff075a31139a22194d3e5a2f0266d80f42e2bd8[bff075a] Renamed Weather as Forecast

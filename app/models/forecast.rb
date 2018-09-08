@@ -19,29 +19,11 @@ class Forecast
 
   attr_accessor(*ATTRIBUTES)
 
-  def initialize(response: nil, **args)
-    if response
-      initialize_from_response(response)
-    else
-      initialize_from_args(args)
-    end
+  def self.attributes
+    ATTRIBUTES
   end
 
-  def initialize_from_response(response)
-    @city = response.dig('name')
-    initialize_forecast_for_date(:today,     response)
-    initialize_forecast_for_date(:tomorrow,  response.dig('list', 0))
-    initialize_forecast_for_date(:five_days, response.dig('list', -1))
-  end
-
-  def initialize_forecast_for_date(prefix, info)
-    %w[temp temp_max temp_min].each do |attribute|
-      instance_variable_set("@#{prefix}_#{attribute}", info.dig('main', attribute))
-    end
-    instance_variable_set("@#{prefix}_weather", info.dig('weather', 0, 'main'))
-  end
-
-  def initialize_from_args(args)
+  def initialize(**args)
     args.each do |name, value|
       public_send("#{name}=", value) if respond_to?("#{name}=")
     end

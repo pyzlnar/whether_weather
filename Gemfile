@@ -17,6 +17,7 @@ gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 
 # Utilities
+gem 'aye_commander'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'dalli'
 gem 'fast_jsonapi'
